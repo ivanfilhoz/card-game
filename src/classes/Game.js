@@ -1,4 +1,5 @@
 import {
+  CARD_COVER,
   GAME_DIFFICULTY_EASY,
   GAME_DIFFICULTY_HARD,
   GAME_DIFFICULTY_NORMAL,
@@ -99,7 +100,7 @@ export default class Game {
     this.state = GAME_STATE_STARTED
 
     this.hideOverlay()
-    this.slots.deck.addCard({ suit: 'cover' })
+    this.slots.deck.addCard(CARD_COVER)
     this.pickCard()
     this.counter.start()
   }

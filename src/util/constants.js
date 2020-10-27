@@ -4,6 +4,10 @@ export const CARD_JOKER = {
   suit: 'joker'
 }
 
+export const CARD_COVER = {
+  suit: 'cover'
+}
+
 const cardValues = _.range(1, 14)
 const cardSuits = ['spades', 'hearts', 'diamonds', 'clubs']
 
