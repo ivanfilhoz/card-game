@@ -1,0 +1,48 @@
+.slot {
+  width: 202.5px;
+  height: 315px;
+  margin: 20px;
+  background: #5fae57;
+  border-radius: 10px;
+
+  &__text {
+    color: #92d18b;
+    font-size: 24pt;
+  }
+
+  &--odd,
+  &--even,
+  &--face {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      color: #92d18b;
+      font-size: 24pt;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &--odd:empty::after {
+    content: 'odd';
+  }
+
+  &--even:empty::after {
+    content: 'even';
+  }
+
+  &--face:empty::after {
+    content: 'face';
+  }
+
+  &--deck {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+}

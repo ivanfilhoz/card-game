@@ -126,7 +126,7 @@ export default class Game {
     this.slots.input.clear()
     if (slot) this.slots[slot].addCard(this.inputCard)
 
-    if (!this.deck.count()) return this.win()
+    if (!this.deck.count()) return this.end(true)
 
     this.pickCard()
   }
@@ -135,10 +135,6 @@ export default class Game {
     if (this.difficulty === GAME_DIFFICULTY_HARD) return this.end(false)
 
     this.counter.penalty()
-  }
-
-  win() {
-    this.end(true)
   }
 
   end(win) {

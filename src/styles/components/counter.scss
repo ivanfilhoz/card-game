@@ -1,0 +1,11 @@
+.counter {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 24pt;
+  color: #92d18b;
+
+  &.penalty {
+    color: #a7383d;
+  }
+}

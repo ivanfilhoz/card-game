@@ -1,0 +1,43 @@
+.card {
+  width: 202.5px;
+  height: 10px;
+  z-index: 1;
+
+  &::after {
+    display: block;
+    content: '';
+    background-image: url('../assets/cards.svg');
+    width: 202.5px;
+    height: 315px;
+  }
+
+  @for $value from 1 through 13 {
+    &[data-value='#{$value}']::after {
+      background-position-x: 202.5px * (14 - $value);
+    }
+  }
+
+  &[data-suit='spades']::after {
+    background-position-y: calc(315px * 2);
+  }
+
+  &[data-suit='hearts']::after {
+    background-position-y: calc(315px * 3);
+  }
+
+  &[data-suit='diamonds']::after {
+    background-position-y: calc(315px * 4);
+  }
+
+  &[data-suits='clubs']::after {
+    background-position-y: 0;
+  }
+
+  &[data-suit='joker']::after {
+    background-position: 0 315px;
+  }
+
+  &[data-suit='cover']::after {
+    background-position: (202.5px * 11) 315px;
+  }
+}
