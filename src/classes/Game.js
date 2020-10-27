@@ -113,7 +113,7 @@ export default class Game {
     const [card] = this.deck.pick(1)
 
     this.inputCard = card
-    this.slots.input.addCard($('slot-input'))
+    this.slots.input.addCard(card)
 
     if (!this.deck.count()) this.slots.deck.clear()
   }
