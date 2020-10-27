@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Organize Cards</title>
+    <link rel="stylesheet" type="text/css" href="./index.scss" />
+  </head>
+  <body>
+    <div class="counter" id="counter">00:00</div>
+    <div class="row row--target">
+      <div class="slot slot--odd" id="slot-odd"></div>
+      <div class="slot slot--face" id="slot-face"></div>
+      <div class="slot slot--even" id="slot-even"></div>
+    </div>
+    <div class="row">
+      <div class="slot" id="slot-input"></div>
+    </div>
+    <div class="slot slot--deck" id="slot-deck"></div>
+    <div class="overlay" id="overlay">
+      <div class="overlay__window" id="window-home">
+        <h1>Organize Cards</h1>
+        <h2>Instructions</h2>
+        <ul>
+          <li>Separate the cards between even, odd and face cards.</li>
+          <li>Aces are odd; jokers must be discarded.</li>
+          <li>Wrong movements will result in penalties.</li>
+        </ul>
+        <h2>Controls</h2>
+        <ul class="controls">
+          <li class="controls__left">Move to odd cards deck</li>
+          <li class="controls__up">Move to face cards deck</li>
+          <li class="controls__right">Move to even cards deck</li>
+          <li class="controls__down">Discard</li>
+        </ul>
+        <h2>Difficulty</h2>
+        <ul>
+          <li><strong>Easy:</strong> no jokers; 5 seconds penalty.</li>
+          <li><strong>Normal:</strong> with jokers; 5 seconds penalty.</li>
+          <li><strong>Hard:</strong> with jokers; no wrong movements.</li>
+        </ul>
+        <div class="overlay__buttons">
+          <button id="button-easy">Easy</button>
+          <button id="button-normal">Normal</button>
+          <button id="button-hard">Hard</button>
+        </div>
+      </div>
+      <div class="overlay__window" id="window-finish">
+        <h1 id="finish-win">
+          Your score is
+          <span class="result result--win" id="span-result">00:00</span>
+        </h1>
+        <h1 id="finish-lose">
+          You <span class="result result--lose">lost</span>.
+        </h1>
+        <div class="overlay__buttons">
+          <button id="button-retry">Play Again</button>
+          <button id="button-home">Back to Home Screen</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
