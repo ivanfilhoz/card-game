@@ -126,7 +126,7 @@ export default class Game {
     this.slots.input.clear()
     if (slot) this.slots[slot].addCard(this.inputCard)
 
-    if (this.deck.count()) return this.win()
+    if (!this.deck.count()) return this.win()
 
     this.pickCard()
   }
